@@ -1,5 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
+
+
+:root{
+    --menuBG : #252830;
+    --bodyBG:  #ffffff;
+    --fontColor: #131417;
+    --fontColorMenu: #ffffff;
+    --indiceColor : #131417;
+    --fuenteParrafos: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+    --fuenteTitulos:'Heebo', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{ /*#fddb30*/
+    background-color: #fddb30;
+    font-family: var(--fuenteParrafos);
+    color: var(--menuBG);
+}
+
+.Pagina{
+    display: grid;
+    grid-template-areas: 
+    "menu"
+    "inicio"
+    "documentacion"
+    "servicios";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+}
+
+.menu{
+    display: grid;
+    grid-area: menu;
+}
+
+.inicio{
+    display: grid;
+    grid-area: inicio;
+}
+
+.documentacion{
+    display: grid;
+    grid-area: documentacion;
+}
+
+.servicios{
+    display: grid;
+    grid-area: servicios;
+}
+
+/*.explorar{
+    grid-area: "explorar";
+}
+
+.footer{
+    grid-area: "footer";
+}
+*/
+.menu-navegacion__contenido{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 80px;
+    align-items: center;
+    /* padding-right: 40px;*/
+    text-align: center;
+}
+
+.menu-navegacion__item{
+    padding-left: 15px;
+    text-align: center;
+}
+
+.menu-navegacion__item a{
+    text-decoration: none;
+    color: var(--menuBG);
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0px 10px 5px 10px;
+}
+
+.menu-navegacion__item a:hover{
+    border-bottom: 2px solid #000;
+}
+
+.inicio__contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 70px 10px 70px;
+    align-items: center;
+}
+
+.inicio__titulo{
+    font-size: 4.5em;
+}
+
+.inicio__subtitulo{
+    width: 50vw;
+    font-size: 1.5em;
+    padding: 0px 0px 30px 0px;
+}
+
+.inicio__boton{
+    border: 2px solid white;
+    border-radius: 5px;
+	cursor:pointer;
+	color:var(--indiceColor);
+	font-size:1.4em;
+	text-decoration:none;
+    padding:10px 10px 10px 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background-color: white;
+}
+
+.inicio__boton:hover{
+    border: 2px solid rgb(231, 231, 231);
+    background-color: rgb(231, 231, 231);;
+   
+}
+
+
+.inicio-figura{
+    margin-top: 20px;
+    padding: 20px 0px 20px 0px;
+}
+
+.inicio-figura__imagen{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.6);
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+.servicios-imagenes__logo{
+    height: auto;
+    width: auto;
+    max-width: 200px;
 }
