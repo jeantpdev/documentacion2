@@ -162,20 +162,89 @@ body {
 
 }
 
+.documentacion__contenido{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 400px 400px;
+    padding: 50px 0px 50px 0px;
+
+}
+
+.documentacion-tarjeta1{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-row: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.tarjeta1__contenido{
+    text-align: end;
+}
+
+.documentacion__titulo1{
+    font-size: 5em;
+}
+
+
+.documentacion__imagen{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+    width: 200px;
+    height: auto;
+
+}
+
+.documentacion-tarjeta2{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-row: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta2__contenido{
+    padding-top: 30px;
+    text-align: start;
+}
+
+.documentacion__titulo2{
+    font-size: 5em;
+}
+
+.documentacion__imagen2{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+    width: 200px;
+    height: auto;
+}
+
+.servicios-titulo{
+    padding-bottom: 50px;
+}
+
+.servicios__titulo{
+    font-size: 3em;
+}
+
+.servicios-lista__contenido{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 300px 0px 300px;
+}
+
+
 .servicios-imagenes__logo {
     height: auto;
     width: auto;
     max-width: 200px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
 
     * {
         margin: 0;
         padding: 0;
     }
-
-
 
     .grid {
         grid-template-areas:
@@ -183,6 +252,15 @@ body {
             "subtitulo"
             "imagen"
             "boton";
+    }
+
+    .menu-navegacion__contenido{
+        justify-content: start;
+    }
+
+    .menu-navegacion__item a{
+        font-size: 0.7em;
+        padding: 0px
     }
 
     .inicio-figura {
@@ -202,33 +280,20 @@ body {
         padding: 20px 0px 40px 0px;
     }
 
-    .inicio__contenido {
-        padding: 0px;
-
-    }
-
     .inicio__titulo {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .inicio__subtitulo {
-        font-size: 1.6em;
-        width: 100vw;
-    }
-
-    .inicio-subtitulo {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .inicio-figura{
-        padding: 20px;
+        font-size: 1.5em;
+        width: auto;
+        padding: 10px;
     }
 
     .inicio-figura__imagen {
-        width: 450px;
+        width: 350px;
+        height: 230px;
+
     }
 
 
