@@ -2,7 +2,7 @@
 @import url(/estilos/normalice.css);
 :root{
     --menuBG : #252830;
-    --backgroundColor:#fddb30;
+    --backgroundColor:#efe9f4;
     --bodyBG:  #ffffff;
     --fontColor: #131417;
     --fontColorMenu: #ffffff;
@@ -104,11 +104,24 @@ p,li{
 /* Menu prinicipal FIN*/
 
 /* Menu secundario INICIO*/
+
+.toggle{
+    width:100%;
+    padding: 10px 20px;
+    background: var(--menuBG);
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
 .menu-secundario{
     background: var(--menuBG);
     padding: 10px;
     /* border: 2px solid orange;*/
-    height: 450px;
+    height: auto;
+    max-height: 450px;
     border-radius: 7px;
     position: fixed;
     width: 270px;
@@ -132,6 +145,7 @@ p,li{
     font-size: 1.1em;
     letter-spacing: 1.5px;
     transition: all 0.5s ease;
+    text-align: start;
 }
 
 .menu-secundario__item a:hover{
@@ -148,7 +162,7 @@ p,li{
     border-radius: 7px;
     box-shadow: -10px 0 40px rgb(0 0 0 / 7%);
     color: var(--fontColor);
-    height: 100vh;
+    height: 85vh;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -177,6 +191,88 @@ p,li{
 }
 
 
+@media only screen and (max-width: 600px) {
 
+    .menu-secundario__contenido{
+        display: none;
+    }
+
+    .menu-secundario__contenido .menu-secundario__item{
+        text-align: center;
+        display: block;
+    }
+
+    .toggle{
+        display: block;
+    }
+    .mobile{
+        display: block;
+    }
+
+    .Pagina{
+        display: grid;
+        grid-template-areas:
+        "menu"
+        "menu2"
+        "info";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .menu-1{
+        display: grid;
+        grid-area: menu;
+    }
+
+    .menu-2{
+        display: grid;
+        grid-area: menu2;
+    }
+
+    .menu-secundario{
+        position: static;
+        width: 552px;
+    }
+
+    .info{
+        display: grid;
+        grid-area: info;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .menu-principal{
+        display: none;
+    }
+
+    .menu-principal__contenido{
+        justify-content:start;
+        height: 50px;
+    }
+
+    .menu-principal__item a{
+        font-size: 0.8em;
+    }
+
+    .menu-secundario{
+        width: auto;
+    }
+
+    .info__cuerpo{
+        height: 70vh;
+    }
+
+    .info__titulo, .info__sub-titulo{
+        text-align: center;
+    }
+
+    .info-ul__contenido, .info-ol__contenido{
+        margin-left: 20px;
+        padding: 10px 0px 10px 0px;
+    }
+    
+}
 
 

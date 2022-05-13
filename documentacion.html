@@ -8,6 +8,9 @@
 
     <!--Estilos propios-->
     <link rel="stylesheet" href="estilos/estilos-documentacion.css">
+    <script src="javascript/script.js"> </script>
+    <script src="javascript/script.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 
@@ -33,13 +36,12 @@
         <aside class="menu-2">
 
             <nav class="menu-secundario">
-
-                <ul class="menu-secundario__contenido">
+                <div class="toggle">
+                    <i class="fas fa-bars" onclick="mobile()"></i>
+                </div>
+                <ul class="menu-secundario__contenido" id="menu-secu">
                     <li class="menu-secundario__item"><a href="#Redes">Redes</a></li>
                     <li class="menu-secundario__item"><a href="#WindowsServer">Windows Server</a></li>
-                    <li class="menu-secundario__item"><a href=""></a></li>
-                    <li class="menu-secundario__item"><a href=""></a></li>
-                    <li class="menu-secundario__item"><a href=""></a></li>
                 </ul>
             </nav>
         </aside>
@@ -190,7 +192,7 @@
 
     </div>
 
-
+    
     <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
 </body>
 
