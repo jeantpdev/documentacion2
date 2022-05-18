@@ -20,12 +20,16 @@
 
 body {
     /*#fddb30*/
-    background-color: var(--backgroundColor);
+    background-color: var(--bodyBG);
     font-family: var(--fuenteParrafos);
     color: var(--menuBG);
+    overflow-x: hidden;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--fuenteTitulos);
 }
 
@@ -35,6 +39,7 @@ h1,h2,h3,h4{
         "menu"
         "inicio"
         "documentacion"
+        "interes"
         "servicios";
     grid-template-columns: 1fr;
     grid-template-rows: 100px auto;
@@ -46,7 +51,7 @@ h1,h2,h3,h4{
     grid-area: menu;
 }
 
-.inicio{
+.inicio {
     display: grid;
     grid-area: inicio;
     height: 100vh;
@@ -55,22 +60,22 @@ h1,h2,h3,h4{
 .inicio__contenido {
     display: grid;
     grid-template-areas:
-    "titulo"
-    "subtitulo"
-    "boton"
-    "imagen";
+        "titulo"
+        "subtitulo"
+        "boton"
+        "imagen";
     justify-items: center;
 }
 
-.inicio-titulo{
+.inicio-titulo {
     grid-area: titulo;
 }
 
-.inicio-subtitulo{
+.inicio-subtitulo {
     grid-area: subtitulo;
 }
 
-.inicio-boton{
+.inicio-boton {
     grid-area: boton;
 }
 
@@ -85,6 +90,90 @@ h1,h2,h3,h4{
     display: grid;
     grid-area: documentacion;
     background-color: #131417;
+}
+
+.interes {
+    grid-area: interes;
+}
+
+.interes__contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "titulo tarjeta1 tarjeta2"
+        "titulo tarjeta3 tarjeta4";
+    align-items: center;
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.interes__tarjeta1,
+.interes__tarjeta2,
+.interes__tarjeta3,
+.interes__tarjeta4 {
+    height: auto;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    border-radius: 6px;
+    padding: 10px 0px 50px 0px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.interes__tarjeta1:hover,
+.interes__tarjeta2:hover,
+.interes__tarjeta3:hover,
+.interes__tarjeta4:hover {
+    background-color: var(--backgroundColor);
+}
+
+
+.interes__titulo {
+    grid-area: titulo;
+    font-size: 4em;
+}
+
+.interes__tarjeta1 {
+    grid-area: tarjeta1;
+}
+
+.interes__tarjeta2 {
+    grid-area: tarjeta2;
+}
+
+.interes__tarjeta3 {
+    grid-area: tarjeta3;
+}
+
+.interes__tarjeta4 {
+    grid-area: tarjeta4;
+}
+
+.tarjeta__titulo {
+    font-size: 1.6em;
+}
+
+.tarjeta__descripcion {
+    padding: 20px 20px 20px 20px;
+}
+
+.tarjeta__final {
+    background-color: #252830;
+    display: grid;
+    height: 50px;
+    width: 180px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.tarjeta__boton {
+    color: var(--fontColorMenu);
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: capitalize;
 }
 
 .servicios {
@@ -108,11 +197,8 @@ h1,h2,h3,h4{
     list-style: none;
     height: 80px;
     align-items: center;
-    /* padding-right: 40px;*/
     text-align: center;
 }
-
-
 
 .menu-navegacion__item {
     padding-left: 15px;
@@ -153,15 +239,13 @@ h1,h2,h3,h4{
     padding: 10px 10px 10px 10px;
     letter-spacing: 2px;
     font-weight: 400;
-    background-color: white;
+    background-color: var(--backgroundColor);
 }
 
 .inicio__boton:hover {
     border: 2px solid rgb(231, 231, 231);
     background-color: rgb(231, 231, 231);
-
 }
-
 
 .inicio-figura__imagen {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
@@ -171,7 +255,7 @@ h1,h2,h3,h4{
 
 }
 
-.documentacion__contenido{
+.documentacion__contenido {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 400px 400px;
@@ -179,11 +263,12 @@ h1,h2,h3,h4{
     color: #efe9f4;
 }
 
-.documentacion__titulo{
+.documentacion__titulo {
     font-size: 3em;
 }
 
-.documentacion-tarjeta1, .documentacion-tarjeta2{
+.documentacion-tarjeta1,
+.documentacion-tarjeta2 {
     display: grid;
     grid-template-columns: 600px 600px;
     grid-row: auto;
@@ -192,29 +277,33 @@ h1,h2,h3,h4{
     align-items: center;
 }
 
-.tarjeta1__contenido{
+.tarjeta1__contenido {
     text-align: end;
 }
 
-.tarjeta1__titulo, .tarjeta2__titulo{
+.tarjeta1__titulo,
+.tarjeta2__titulo {
     font-size: 5em;
 }
 
-.tarjeta1__subtitulo, .tarjeta2__subtitulo{
+.tarjeta1__subtitulo,
+.tarjeta2__subtitulo {
     font-size: 1.23em;
 }
 
-.tarjeta1__titulo, .tarjeta1__subtitulo{
+.tarjeta1__titulo,
+.tarjeta1__subtitulo {
     text-align: start;
 }
 
-.tarjeta2__titulo, .tarjeta2__subtitulo{
+.tarjeta2__titulo,
+.tarjeta2__subtitulo {
     text-align: end;
 }
 
 
 
-.video1{
+.video1 {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
     height: auto;
 }
@@ -224,48 +313,54 @@ h1,h2,h3,h4{
     width: 200px;
     height: auto;
 
-}*/ 
+}*/
 
-.documentacion__imagen2{
+.documentacion__imagen2 {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
     width: 200px;
     height: auto;
 }
 
-.tarjeta2__contenido{
+.tarjeta2__contenido {
     text-align: start;
 }
 
-.servicios__contenido{
-    padding: 50px 0px 50px 0px;
-}
-
-.servicios-titulo{
-    padding-bottom: 50px;
-}
-
-.servicios__titulo{
+.servicios__titulo {
+    padding: 20px;
     font-size: 3em;
 }
 
-.servicios-lista__contenido{
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 300px 0px 300px;
+.servicios-lista__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    row-gap: 20px;
 }
 
-.servicios-imagenes{
-    background-color: aliceblue;
-    padding: 20px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+.servicios-lista__contenido {
+    display: grid;
+    grid-template-areas:
+    "logo texto";
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    height: 25vh;
+    width: 80vh;
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.servicios-lista__texto{
+    grid-area: texto;
 }
 
 
-.servicios-imagenes__logo {
-    height: auto;
-    width: auto;
-    max-width: 200px;
-}
 
 @media only screen and (max-width: 400px) {
 
@@ -282,11 +377,11 @@ h1,h2,h3,h4{
             "boton";
     }
 
-    .menu-navegacion__contenido{
+    .menu-navegacion__contenido {
         justify-content: start;
     }
 
-    .menu-navegacion__item a{
+    .menu-navegacion__item a {
         font-size: 0.7em;
         padding: 0px
     }
@@ -303,7 +398,7 @@ h1,h2,h3,h4{
         grid-area: boton;
     }
 
-    .inicio-boton {    
+    .inicio-boton {
         grid-area: imagen;
         padding: 20px 0px 40px 0px;
     }

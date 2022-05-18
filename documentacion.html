@@ -21,13 +21,14 @@
 
         <header class="menu-1">
             <nav class="menu-principal">
-                
+                <i class="fa-brands fa-blogger-b"></i>
+
                 <ul class="menu-principal__contenido">
-                  <!--<li class="menu-principal__item"><a href="">Documentacion</a></li> -->   
+                    <!--<li class="menu-principal__item"><a href="">Documentacion</a></li> -->
                     <li class="menu-principal__item"><a href="index.html">Inicio</a></li>
                     <li class="menu-principal__item"><a href="">Documentacion</a></li>
                     <li class="menu-principal__item"><a href="">Servicios</a></li>
-                    <li class="menu-principal__item"><a href="">Acerca de mi</a></li>                   
+                    <li class="menu-principal__item"><a href="">Acerca de mi</a></li>
                 </ul>
             </nav>
         </header>
@@ -97,7 +98,7 @@
                         </ul>
                         <br>
                         <h2 class="info__sub-titulo">Puerto 80</h2>
-                        
+
                         <p class="info__parrafo">En el ámbito de la informática, se conoce como Puerto 80 al que puerto
                             por default, por el
                             medio del cual un servidor HTTP “escucha” la petición hecha por un cliente, es decir por una
@@ -108,7 +109,7 @@
                             que mientras la PC de cada uno ocupa un puerto aleatorio, al momento de originar una
                             petición al servidos, en el caso del HTTP siempre será, indistintamente el puerto 80, el que
                             escuche o reciba la solicitud de servicio hecha por la PC cliente.</p>
-                            <br>
+                        <br>
                     </article>
 
                     <article class="info__articulo" id="WindowsServer">
@@ -131,58 +132,135 @@
                             una unidad adicional. Si la configuración del servidor de archivos se ha realizado
                             correctamente, los usuarios tiene plena libertad para crear, modificar y ejecutar los
                             archivos que deseen de manera directa desde el servidor.</p>
+                        <br>
+                        <h2 class="info__subtitulo">Implementar servidor de archivos en windows server:</h2>
+                        <p class="info__parrafo">
+                            Para tener un servidor de archivosen windows server, es necesario implementar BranchCache:
                             <br>
-                            <h2 class="info__subtitulo">Implementar servidor de archivos en windows server:</h2>
-                            <p class="info__parrafo">
-                                Para tener un servidor de archivosen windows server, es necesario implementar BranchCache:
-                                <br>
-                                <strong>BranchCache</strong> es una tecnología de optimización de ancho de banda de red de área extensa (WAN) que se incluye en algunas ediciones de los sistemas operativos Windows Server 2016 y Windows 10, así como en algunas ediciones de Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2 y Windows 7. Para mejorar el ancho de banda de la WAN cuando los usuarios acceden a contenido de servidores remotos, BranchCache obtiene el contenido de los servidores de contenido de la oficina central o de la nube hospedada y lo almacena en la memoria caché de las sucursales, lo que permite que los equipos cliente de dichas sucursales accedan al contenido de forma local, y no a través de la WAN.
-                                <br><br>
-                                En las sucursales, el contenido se almacena en servidores configurados para hospedar la memoria caché o, cuando no hay ningún servidor disponible en la sucursal, en equipos cliente que ejecutan Windows 10, Windows 8.1, Windows 8 o Windows 7. Cuando un equipo cliente haya solicitado y recibido un determinado contenido de la oficina central y este se haya almacenado en caché en la sucursal, el resto de equipos de la sucursal podrá disponer de este contenido de forma local y sin necesidad de descargarlo del servidor de contenido a través de un vínculo WAN.
-                                <br><br>    
-                                BranchCache aumenta la productividad del usuario final al mejorar tanto el tiempo de respuesta de las consultas de contenido en los clientes y servidores de las sucursales como el rendimiento de la red, ya que reduce el tráfico en los vínculos WAN.
-                            </p>
-                            <br>
-                            <h2 class="info__subtitulo">Requisitos para implementar un servidor de archivos:</h2>
-                            <ul class="info-ul__contenido">
-                                <li class="info-ul__item">Los servidores de contenido web y de archivos deben ejecutar uno de los siguientes sistemas operativos para proporcionar funcionalidad de BranchCache: Windows Server 2016, Windows Server 2012 R2 , Windows Server 2012 o Windows Server 2008 R2 . Windows 8 y versiones posteriores siguen teniendo las ventajas de BranchCache al acceder a servidores de contenido que ejecutan Windows Server 2008 R2, pero no pueden usar las nuevas tecnologías de fragmentación y hash en Windows Server 2016, Windows Server 2012 R2 y Windows Server 2012.</li>
-                                <li class="info-ul__item">Los equipos cliente deben ejecutar Windows 10, Windows 8.1 o Windows 8 para usar el modelo de implementación más reciente y las mejoras de fragmentación y hash que se introdujeron con Windows Server 2012 .</li>
-                                <li class="info-ul__item">Los servidores de caché hospedada deben ejecutar Windows Server 2016, Windows Server 2012 R2 o Windows Server 2012 para usar las mejoras de implementación y las características de escalado descritas en este documento. Un equipo que ejecuta uno de estos sistemas operativos configurado como servidor de caché hospedada puede seguir atienden equipos cliente que ejecutan Windows 7, pero para ello, debe estar equipado con un certificado que sea adecuado para seguridad de la capa de transporte (TLS), como se describe en la guía de implementación de Windows Server 2008 R2 y Windows 7 BranchCache.</li>
-                                <li class="info-ul__item">Se Active Directory dominio para aprovechar las ventajas de la detección automática directiva de grupo caché hospedada y de almacenamiento en caché, pero no es necesario un dominio para usar BranchCache. Puede configurar equipos individuales mediante Windows PowerShell. Además, no es necesario que los controladores de dominio ejecuten Windows Server 2012 o posterior para usar la nueva configuración de BranchCache directiva de grupo; puede importar las plantillas administrativas de BranchCache en controladores de dominio que ejecutan sistemas operativos anteriores o puede crear los objetos de directiva de grupo de forma remota en otros equipos que ejecutan Windows 10. Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows 8 o Windows Server 2012.</li>
-                                <li class="info-ul__item">Active Directory se usan para limitar el ámbito de los servidores de caché hospedada que se detectan automáticamente. Para detectar automáticamente un servidor de caché hospedada, los equipos cliente y servidor deben pertenecer al mismo sitio. BranchCache está diseñado para tener un impacto mínimo en clientes y servidores y no impone requisitos de hardware adicionales más allá de los necesarios para ejecutar sus respectivos sistemas operativos.</li>
-                            </ul>
-                            <br>
+                            <strong>BranchCache</strong> es una tecnología de optimización de ancho de banda de red de
+                            área extensa (WAN) que se incluye en algunas ediciones de los sistemas operativos Windows
+                            Server 2016 y Windows 10, así como en algunas ediciones de Windows Server 2012 R2, Windows
+                            8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2 y Windows 7. Para mejorar el
+                            ancho de banda de la WAN cuando los usuarios acceden a contenido de servidores remotos,
+                            BranchCache obtiene el contenido de los servidores de contenido de la oficina central o de
+                            la nube hospedada y lo almacena en la memoria caché de las sucursales, lo que permite que
+                            los equipos cliente de dichas sucursales accedan al contenido de forma local, y no a través
+                            de la WAN.
+                            <br><br>
+                            En las sucursales, el contenido se almacena en servidores configurados para hospedar la
+                            memoria caché o, cuando no hay ningún servidor disponible en la sucursal, en equipos cliente
+                            que ejecutan Windows 10, Windows 8.1, Windows 8 o Windows 7. Cuando un equipo cliente haya
+                            solicitado y recibido un determinado contenido de la oficina central y este se haya
+                            almacenado en caché en la sucursal, el resto de equipos de la sucursal podrá disponer de
+                            este contenido de forma local y sin necesidad de descargarlo del servidor de contenido a
+                            través de un vínculo WAN.
+                            <br><br>
+                            BranchCache aumenta la productividad del usuario final al mejorar tanto el tiempo de
+                            respuesta de las consultas de contenido en los clientes y servidores de las sucursales como
+                            el rendimiento de la red, ya que reduce el tráfico en los vínculos WAN.
+                        </p>
+                        <br>
+                        <h2 class="info__subtitulo">Requisitos para implementar un servidor de archivos:</h2>
+                        <ul class="info-ul__contenido">
+                            <li class="info-ul__item">Los servidores de contenido web y de archivos deben ejecutar uno
+                                de los siguientes sistemas operativos para proporcionar funcionalidad de BranchCache:
+                                Windows Server 2016, Windows Server 2012 R2 , Windows Server 2012 o Windows Server 2008
+                                R2 . Windows 8 y versiones posteriores siguen teniendo las ventajas de BranchCache al
+                                acceder a servidores de contenido que ejecutan Windows Server 2008 R2, pero no pueden
+                                usar las nuevas tecnologías de fragmentación y hash en Windows Server 2016, Windows
+                                Server 2012 R2 y Windows Server 2012.</li>
+                            <li class="info-ul__item">Los equipos cliente deben ejecutar Windows 10, Windows 8.1 o
+                                Windows 8 para usar el modelo de implementación más reciente y las mejoras de
+                                fragmentación y hash que se introdujeron con Windows Server 2012 .</li>
+                            <li class="info-ul__item">Los servidores de caché hospedada deben ejecutar Windows Server
+                                2016, Windows Server 2012 R2 o Windows Server 2012 para usar las mejoras de
+                                implementación y las características de escalado descritas en este documento. Un equipo
+                                que ejecuta uno de estos sistemas operativos configurado como servidor de caché
+                                hospedada puede seguir atienden equipos cliente que ejecutan Windows 7, pero para ello,
+                                debe estar equipado con un certificado que sea adecuado para seguridad de la capa de
+                                transporte (TLS), como se describe en la guía de implementación de Windows Server 2008
+                                R2 y Windows 7 BranchCache.</li>
+                            <li class="info-ul__item">Se Active Directory dominio para aprovechar las ventajas de la
+                                detección automática directiva de grupo caché hospedada y de almacenamiento en caché,
+                                pero no es necesario un dominio para usar BranchCache. Puede configurar equipos
+                                individuales mediante Windows PowerShell. Además, no es necesario que los controladores
+                                de dominio ejecuten Windows Server 2012 o posterior para usar la nueva configuración de
+                                BranchCache directiva de grupo; puede importar las plantillas administrativas de
+                                BranchCache en controladores de dominio que ejecutan sistemas operativos anteriores o
+                                puede crear los objetos de directiva de grupo de forma remota en otros equipos que
+                                ejecutan Windows 10. Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows 8
+                                o Windows Server 2012.</li>
+                            <li class="info-ul__item">Active Directory se usan para limitar el ámbito de los servidores
+                                de caché hospedada que se detectan automáticamente. Para detectar automáticamente un
+                                servidor de caché hospedada, los equipos cliente y servidor deben pertenecer al mismo
+                                sitio. BranchCache está diseñado para tener un impacto mínimo en clientes y servidores y
+                                no impone requisitos de hardware adicionales más allá de los necesarios para ejecutar
+                                sus respectivos sistemas operativos.</li>
+                        </ul>
+                        <br>
 
-                            <h2 class="info__subtitulo">Instalación de BranchCache</h2>
-                            <p class="info__parrafo">
-                                Para implementar servidores de contenido que son servidores web del Protocolo de transferencia de hipertexto seguro (HTTPS), servidores web del Protocolo de transferencia de hipertexto (HTTP) y servidores de aplicaciones basados en el servicio de transferencia inteligente en segundo plano (BITS), como Windows Server Update Services (WSUS) y Microsoft Endpoint Configuration Manager servidores de sistema de sitio de distribución de ramas, debe instalar la característica BranchCache, iniciar el servicio BranchCache y (solo para servidores WSUS) realizar pasos de configuración adicionales.
-                            </p>
-                            <!--ul.info-ul__contenido>li.info-ul__item*5-->
-                            <ol class="info-ol__contenido">
-                                <li class="info-ul__item">En el Administrador del servidor, haga clic en Administrar y en Agregar roles y características. Se abre el asistente para Agregar roles y características. Haga clic en Next.</li>
-                                <li class="info-ul__item">En Seleccionar tipo de instalación, asegúrese de que está seleccionada la instalación basada en características o en roles y, a continuación, haga clic en Siguiente.</li>
-                                <li class="info-ul__item">En Seleccionar servidor de destino, asegúrese de que está seleccionado el servidor correcto y, a continuación, haga clic en Siguiente.</li>
-                                <li class="info-ul__item">En Seleccionar características, haga clic en BranchCachey, a continuación, haga clic en Siguiente.</li>
-                                <li class="info-ul__item">En Confirmar selecciones de instalación, haga clic en Instalar. En Progreso de la instalación, continúa la instalación de la característica BranchCache. Una vez completada la instalación, haga clic en Cerrar.</li>
-                            </ol>
-                            <br>
-                            <h2 class="info__subtitulo">Instalar un nuevo servidor de archivos como servidor de contenido</h2>
+                        <h2 class="info__subtitulo">Instalación de BranchCache</h2>
+                        <p class="info__parrafo">
+                            Para implementar servidores de contenido que son servidores web del Protocolo de
+                            transferencia de hipertexto seguro (HTTPS), servidores web del Protocolo de transferencia de
+                            hipertexto (HTTP) y servidores de aplicaciones basados en el servicio de transferencia
+                            inteligente en segundo plano (BITS), como Windows Server Update Services (WSUS) y Microsoft
+                            Endpoint Configuration Manager servidores de sistema de sitio de distribución de ramas, debe
+                            instalar la característica BranchCache, iniciar el servicio BranchCache y (solo para
+                            servidores WSUS) realizar pasos de configuración adicionales.
+                        </p>
+                        <!--ul.info-ul__contenido>li.info-ul__item*5-->
+                        <ol class="info-ol__contenido">
+                            <li class="info-ul__item">En el Administrador del servidor, haga clic en Administrar y en
+                                Agregar roles y características. Se abre el asistente para Agregar roles y
+                                características. Haga clic en Next.</li>
+                            <li class="info-ul__item">En Seleccionar tipo de instalación, asegúrese de que está
+                                seleccionada la instalación basada en características o en roles y, a continuación, haga
+                                clic en Siguiente.</li>
+                            <li class="info-ul__item">En Seleccionar servidor de destino, asegúrese de que está
+                                seleccionado el servidor correcto y, a continuación, haga clic en Siguiente.</li>
+                            <li class="info-ul__item">En Seleccionar características, haga clic en BranchCachey, a
+                                continuación, haga clic en Siguiente.</li>
+                            <li class="info-ul__item">En Confirmar selecciones de instalación, haga clic en Instalar. En
+                                Progreso de la instalación, continúa la instalación de la característica BranchCache.
+                                Una vez completada la instalación, haga clic en Cerrar.</li>
+                        </ol>
+                        <br>
+                        <h2 class="info__subtitulo">Instalar un nuevo servidor de archivos como servidor de contenido
+                        </h2>
 
-                            <p class="info__parrafo">
-                            Para implementar servidores de contenido que ejecutan el rol de servidor Servicios de archivo, debe instalar el servicio de rol BranchCache para archivos de red del rol de servidor Servicios de archivo. Además, debe habilitar BranchCache en recursos compartidos de archivos según sus requisitos.
+                        <p class="info__parrafo">
+                            Para implementar servidores de contenido que ejecutan el rol de servidor Servicios de
+                            archivo, debe instalar el servicio de rol BranchCache para archivos de red del rol de
+                            servidor Servicios de archivo. Además, debe habilitar BranchCache en recursos compartidos de
+                            archivos según sus requisitos.
 
-                            Durante la configuración del servidor de contenido, puede permitir la publicación de contenido de BranchCache para todos los recursos compartidos de archivos, o puede seleccionar un subconjunto de los recursos compartidos de archivos para su publicación.
-                            </p>
-                            <ol class="info-ul__contenido">
-                                <li class="info-ul__item">Instalar un nuevo servidor de archivos como servidor de contenido</li>
-                                <li class="info-ul__item">En Seleccionar tipo de instalación, asegúrese de que la instalación basada en características o en roles está seleccionada y, a continuación, haga clic en Siguiente.</li>
-                                <li class="info-ul__item">En Seleccionar servidor de destino, asegúrese de que está seleccionado el servidor correcto y, a continuación, haga clic en Siguiente.</li>
-                                <li class="info-ul__item">En Seleccionar roles de servidor, en Roles, tenga en cuenta que el rol Servicios de archivos y Storage ya está instalado; haga clic en la flecha situada a la izquierda del nombre del rol para expandir la selección de servicios de rol y, a continuación, haga clic en la flecha situada a la izquierda de Servicios de archivo e iSCSI.</li>
-                                <li class="info-ul__item">Active las casillas Servidor de archivos yBranchCache para Archivos de red. SugerenciaTambién se recomienda activar la casilla Desduplicación de datos.Haga clic en Next.</li>
-                                <li class="info-ul__item">En Seleccionar características, haga clic en Siguiente.</li>
-                                <li class="info-ul__item">En Confirmar selecciones de instalación, revise las selecciones y, a continuación, haga clic en Instalar. El panel Progreso de la instalación se muestra durante la instalación. Una vez completada la instalación, haga clic en Cerrar.</li>
-                            </ol>
-                                
+                            Durante la configuración del servidor de contenido, puede permitir la publicación de
+                            contenido de BranchCache para todos los recursos compartidos de archivos, o puede
+                            seleccionar un subconjunto de los recursos compartidos de archivos para su publicación.
+                        </p>
+                        <ol class="info-ul__contenido">
+                            <li class="info-ul__item">Instalar un nuevo servidor de archivos como servidor de contenido
+                            </li>
+                            <li class="info-ul__item">En Seleccionar tipo de instalación, asegúrese de que la
+                                instalación basada en características o en roles está seleccionada y, a continuación,
+                                haga clic en Siguiente.</li>
+                            <li class="info-ul__item">En Seleccionar servidor de destino, asegúrese de que está
+                                seleccionado el servidor correcto y, a continuación, haga clic en Siguiente.</li>
+                            <li class="info-ul__item">En Seleccionar roles de servidor, en Roles, tenga en cuenta que el
+                                rol Servicios de archivos y Storage ya está instalado; haga clic en la flecha situada a
+                                la izquierda del nombre del rol para expandir la selección de servicios de rol y, a
+                                continuación, haga clic en la flecha situada a la izquierda de Servicios de archivo e
+                                iSCSI.</li>
+                            <li class="info-ul__item">Active las casillas Servidor de archivos yBranchCache para
+                                Archivos de red. SugerenciaTambién se recomienda activar la casilla Desduplicación de
+                                datos.Haga clic en Next.</li>
+                            <li class="info-ul__item">En Seleccionar características, haga clic en Siguiente.</li>
+                            <li class="info-ul__item">En Confirmar selecciones de instalación, revise las selecciones y,
+                                a continuación, haga clic en Instalar. El panel Progreso de la instalación se muestra
+                                durante la instalación. Una vez completada la instalación, haga clic en Cerrar.</li>
+                        </ol>
+
                     </article>
 
                 </div>
@@ -192,7 +270,7 @@
 
     </div>
 
-    
+
     <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
 </body>
 

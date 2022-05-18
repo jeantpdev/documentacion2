@@ -41,7 +41,7 @@ p,li{
         /* Organizar paginas INICIO*/
 .Pagina{
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 270px auto;
     grid-template-rows: 80px auto;
 }
 /* Menu secundario */
@@ -53,13 +53,13 @@ p,li{
 .menu-2{
     grid-row: 2;
     grid-column: 1 / 2;
-    margin: 20px 20px;
+    margin: 10px 10px;
 }
 /* contenido principal */
 .info{
     grid-row: 2;
     grid-column: 2/3;
-    padding: 20px;
+    padding: 5px 10px 0px 5px;
 }
 
         /* Organizar paginas FIN*/
@@ -68,13 +68,15 @@ p,li{
 .menu-principal{
     /* border: 2px solid orange; */
     background: var(--menuBG);
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu-principal__contenido{
     display: flex;
     justify-content: end;
     list-style: none;
-    height: 80px;
+    height: 70px;
     align-items: center;
     padding-right: 40px;
     text-align: center;
@@ -124,7 +126,8 @@ p,li{
     max-height: 450px;
     border-radius: 7px;
     position: fixed;
-    width: 270px;
+    width: 250px;
+    display: flex;
 }
 
 .menu-secundario__contenido{
