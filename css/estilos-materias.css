@@ -1,0 +1,84 @@
+@import url(normalice.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;;
+}
+
+html {
+    background-color: #0F1020;
+}
+
+.pagina__contenido {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "carreras";
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+.pagina__cabeza {
+    grid-area: titulo;
+    text-align: center;
+    align-items: center;
+}
+
+.pagina__titulo{
+    color: white;
+    font-size: clamp(3em, 3vw, 10em);
+}
+
+.pagina__carreras {
+    grid-area: carreras;
+}
+
+.carreras__contenido {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 30px;
+    padding: 0px 0px 30px 0px;
+
+}
+
+.carrera {
+    display: grid;
+    grid-template-rows: auto 10vw 4vw;
+    grid-template-columns:20vw;
+    border: 2px solid white;
+}
+
+.titulo__carrera{
+    padding: 0px 10px;
+    color: white;
+    font-size: 1.4em;
+}
+
+.final-carrera{
+    display: grid;
+    align-items: center;
+    background-color: azure;
+}
+
+.boton__carrera{
+    font-size: clamp(1.3em, 1.5vw, 2em);
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width:600px) {
+
+    .carreras__contenido{
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .carrera {
+        grid-template-rows: 5vw 70vw 15vw;
+        border: 2px solid white;
+        grid-template-columns: auto;
+    }
+}

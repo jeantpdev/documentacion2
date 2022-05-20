@@ -1,0 +1,109 @@
+@import url(normalice.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html {}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+    grid-template-areas:
+        "problema respuestas";
+    padding: 30px;
+}
+
+.pagina__problema {
+    grid-area: problema;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+}
+
+.pagina__respuestas {
+    grid-area: respuestas;
+}
+
+.respuestas__contenedor{
+    display: grid;
+    row-gap: 20px;
+}
+
+.respuestas__contenido {
+    display: grid;
+    grid-template-areas: 
+    "usuario"
+    "respuesta";
+    background-color: #f3f2f7;
+}
+
+.pagina__respuestas {
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.usuario-respuesta {grid-area: respuesta;}
+
+.usuario__respuesta {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+
+}
+
+.usuario-usuario {
+    display: grid;
+    align-items: end;
+    text-align: center;
+    padding: 10px;
+    grid-template-areas: 
+    "icono nombre"
+    "fecha hola";
+    grid-template-columns:150px auto;
+    grid-template-rows: auto;
+}
+
+.usuario__nombre{
+    grid-area: nombre;
+}
+
+.usuario__fecha{
+    grid-area: fecha;
+}
+
+
+.usuario__icono {
+    height: auto;
+    max-width: 60px;
+    border-radius: 50%;
+    width: 100%;
+    grid-area: icono;
+    ;
+}
+
+@media only screen and (max-width:600px) {
+
+
+    .pagina {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 300px;
+        grid-template-areas:
+            "problema" 
+            "respuestas";
+        padding: 30px;
+    }
+
+    .respuestas__contenido {
+        display: grid;
+        grid-template-areas:
+            "usuario"
+            "respuesta";
+    }
+
+    .usuario__icono{
+        text-align: center;
+    }
+}
